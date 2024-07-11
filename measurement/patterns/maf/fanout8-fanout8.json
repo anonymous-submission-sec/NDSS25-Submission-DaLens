@@ -1,0 +1,110 @@
+{
+  "pattern": "Fanout(8)-Fanout(8)",
+  "description": "Fanout-Fanout: resolution will fail. Referral is spread across two nameservers",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "q.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n1.enc(rr0-vp0).$1."},
+          { "name": "q.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n2.enc(rr0-vp0).$1."},
+          { "name": "q.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n3.enc(rr0-vp0).$1."},
+          { "name": "q.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n4.enc(rr0-vp0).$1."},
+          { "name": "q.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n5.enc(rr0-vp0).$1."},
+          { "name": "q.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n6.enc(rr0-vp0).$1."},
+          { "name": "q.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n7.enc(rr0-vp0).$1."},
+          { "name": "q.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n8.enc(rr0-vp0).$1."}
+        ]
+      }
+    ],
+    "1": [
+      {
+        "zone": "$1",
+        "records": [
+          { "name": "n1.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n11.enc(rr0-vp0).$0."},
+          { "name": "n1.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n12.enc(rr0-vp0).$0."},
+          { "name": "n1.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n13.enc(rr0-vp0).$0."},
+          { "name": "n1.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n14.enc(rr0-vp0).$0."},
+          { "name": "n1.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n15.enc(rr0-vp0).$0."},
+          { "name": "n1.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n16.enc(rr0-vp0).$0."},
+          { "name": "n1.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n17.enc(rr0-vp0).$0."},
+          { "name": "n1.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n18.enc(rr0-vp0).$0."},
+
+          { "name": "n2.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n21.enc(rr0-vp0).$0."},
+          { "name": "n2.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n22.enc(rr0-vp0).$0."},
+          { "name": "n2.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n23.enc(rr0-vp0).$0."},
+          { "name": "n2.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n24.enc(rr0-vp0).$0."},
+          { "name": "n2.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n25.enc(rr0-vp0).$0."},
+          { "name": "n2.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n26.enc(rr0-vp0).$0."},
+          { "name": "n2.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n27.enc(rr0-vp0).$0."},
+          { "name": "n2.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n28.enc(rr0-vp0).$0."},
+
+          { "name": "n3.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n31.enc(rr0-vp0).$0."},
+          { "name": "n3.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n32.enc(rr0-vp0).$0."},
+          { "name": "n3.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n33.enc(rr0-vp0).$0."},
+          { "name": "n3.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n34.enc(rr0-vp0).$0."},
+          { "name": "n3.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n35.enc(rr0-vp0).$0."},
+          { "name": "n3.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n36.enc(rr0-vp0).$0."},
+          { "name": "n3.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n37.enc(rr0-vp0).$0."},
+          { "name": "n3.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n38.enc(rr0-vp0).$0."},
+
+          { "name": "n4.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n41.enc(rr0-vp0).$0."},
+          { "name": "n4.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n42.enc(rr0-vp0).$0."},
+          { "name": "n4.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n43.enc(rr0-vp0).$0."},
+          { "name": "n4.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n44.enc(rr0-vp0).$0."},
+          { "name": "n4.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n45.enc(rr0-vp0).$0."},
+          { "name": "n4.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n46.enc(rr0-vp0).$0."},
+          { "name": "n4.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n47.enc(rr0-vp0).$0."},
+          { "name": "n4.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n48.enc(rr0-vp0).$0."},
+          
+          { "name": "n5.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n51.enc(rr0-vp0).$0."},
+          { "name": "n5.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n52.enc(rr0-vp0).$0."},
+          { "name": "n5.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n53.enc(rr0-vp0).$0."},
+          { "name": "n5.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n54.enc(rr0-vp0).$0."},
+          { "name": "n5.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n55.enc(rr0-vp0).$0."},
+          { "name": "n5.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n56.enc(rr0-vp0).$0."},
+          { "name": "n5.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n57.enc(rr0-vp0).$0."},
+          { "name": "n5.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n58.enc(rr0-vp0).$0."},
+          
+          { "name": "n6.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n61.enc(rr0-vp0).$0."},
+          { "name": "n6.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n62.enc(rr0-vp0).$0."},
+          { "name": "n6.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n63.enc(rr0-vp0).$0."},
+          { "name": "n6.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n64.enc(rr0-vp0).$0."},
+          { "name": "n6.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n65.enc(rr0-vp0).$0."},
+          { "name": "n6.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n66.enc(rr0-vp0).$0."},
+          { "name": "n6.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n67.enc(rr0-vp0).$0."},
+          { "name": "n6.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n68.enc(rr0-vp0).$0."},
+          
+          { "name": "n7.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n71.enc(rr0-vp0).$0."},
+          { "name": "n7.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n72.enc(rr0-vp0).$0."},
+          { "name": "n7.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n73.enc(rr0-vp0).$0."},
+          { "name": "n7.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n74.enc(rr0-vp0).$0."},
+          { "name": "n7.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n75.enc(rr0-vp0).$0."},
+          { "name": "n7.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n76.enc(rr0-vp0).$0."},
+          { "name": "n7.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n77.enc(rr0-vp0).$0."},
+          { "name": "n7.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n78.enc(rr0-vp0).$0."},
+          
+          { "name": "n8.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n81.enc(rr0-vp0).$0."},
+          { "name": "n8.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n82.enc(rr0-vp0).$0."},
+          { "name": "n8.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n83.enc(rr0-vp0).$0."},
+          { "name": "n8.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n84.enc(rr0-vp0).$0."},
+          { "name": "n8.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n85.enc(rr0-vp0).$0."},
+          { "name": "n8.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n86.enc(rr0-vp0).$0."},
+          { "name": "n8.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n87.enc(rr0-vp0).$0."},
+          { "name": "n8.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n88.enc(rr0-vp0).$0."}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "q.enc(rr0-vp0).$0",
+      "wait": 0,
+      "repeat": 1,
+      "timeout": 30,
+      "expected_status": "SRVFAIL"
+    }
+  ]
+}

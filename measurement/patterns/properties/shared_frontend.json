@@ -1,0 +1,27 @@
+{
+  "pattern": "Shared Frontend Cache",
+  "description": "This pattern is used to determine whether a certain resolver is using a shared frontend cache.",
+  "remark": "The TTL should be much greater than the measurement takes to avoid proactive refilling of the cache by the resolver",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "A", "ttl": 300}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-vp0).$0",
+      "wait": 1,
+      "repeat": 10,
+      "random_subdomains": false,
+      "timeout": 15,
+      "expected_status": "NOERROR"
+    }
+  ]
+}

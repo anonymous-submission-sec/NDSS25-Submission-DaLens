@@ -1,0 +1,52 @@
+{
+  "pattern": "Order Dependencies with RD=0",
+  "description": "This pattern is used to decide whether ns0 uses ns1 or vice versa. It does so by filling the cache of one ns, then probing the other's with Recursion Desired (RD) set to 0",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "enc(rr0-rr1-vp0)", "type": "A", "ttl": 600},
+          { "name": "enc(rr1-rr0-vp0)", "type": "A", "ttl": 600}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-rr1-vp0).$0",
+      "wait": 0,
+      "repeat": 20,
+      "wait_after": 5,
+      "recursion_desired": true
+    },{ 
+      "rr": "rr1",
+      "vp": "vp0",
+      "query": "enc(rr0-rr1-vp0).$0",
+      "wait": 0,
+      "repeat": 3,
+      "wait_after": 10,
+      "recursion_desired": false
+    },
+    
+    { 
+      "rr": "rr1",
+      "vp": "vp0",
+      "query": "enc(rr1-rr0-vp0).$0",
+      "wait": 0,
+      "repeat": 20,
+      "wait_after": 5,
+      "recursion_desired": true
+    },
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr1-rr0-vp0).$0",
+      "wait": 0,
+      "repeat": 3,
+      "recursion_desired": false
+    }
+  ]
+}

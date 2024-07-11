@@ -1,0 +1,42 @@
+{
+  "pattern": "Respects RD=0",
+  "description": "Tests whether a resolver honors the RD=0 flag, prerequisite for other patterns, use always same domain name since we probe the cache",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "A", "ttl": 300}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-vp0).$0",
+      "repeat": 3,
+      "wait_after": 5,
+      "recursion_desired": false,
+      "expected_status": "NOANSWER"
+    },
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-vp0).$0",
+      "repeat": 3,
+      "recursion_desired": true,
+      "wait_after": 5,
+      "expected_status": "NOERROR"
+    },
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-vp0).$0",
+      "repeat": 3,
+      "recursion_desired": false,
+      "expected_status": "NOERROR"
+    }
+  ]
+}

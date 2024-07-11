@@ -1,0 +1,35 @@
+{
+  "pattern": "WChain-QMIN",
+  "description": "Rewrite-Chain(10)-QMIN(12) Attack Composition",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "h.g.f.e.d.c.b.a.q.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "h.g.f.e.d.c.b.a.r1.enc(rr0-vp0).$0."},
+          { "name": "h.g.f.e.d.c.b.a.r1.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "h.g.f.e.d.c.b.a.r2.enc(rr0-vp0).$0."},
+          { "name": "h.g.f.e.d.c.b.a.r2.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "h.g.f.e.d.c.b.a.r3.enc(rr0-vp0).$0."},
+          { "name": "h.g.f.e.d.c.b.a.r3.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "h.g.f.e.d.c.b.a.r4.enc(rr0-vp0).$0."},
+          { "name": "h.g.f.e.d.c.b.a.r4.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "h.g.f.e.d.c.b.a.r5.enc(rr0-vp0).$0."},
+          { "name": "h.g.f.e.d.c.b.a.r5.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "h.g.f.e.d.c.b.a.r6.enc(rr0-vp0).$0."},
+          { "name": "h.g.f.e.d.c.b.a.r6.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "h.g.f.e.d.c.b.a.r7.enc(rr0-vp0).$0."},
+          { "name": "h.g.f.e.d.c.b.a.r7.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "h.g.f.e.d.c.b.a.r8.enc(rr0-vp0).$0."},
+          { "name": "h.g.f.e.d.c.b.a.r8.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "h.g.f.e.d.c.b.a.r9.enc(rr0-vp0).$0."},
+          { "name": "h.g.f.e.d.c.b.a.r9.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "h.g.f.e.d.c.b.a.r10.enc(rr0-vp0).$0."},
+          { "name": "h.g.f.e.d.c.b.a.r10.enc(rr0-vp0)", "type": "A", "ttl": 1}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "h.g.f.e.d.c.b.a.q.enc(rr0-vp0).$0",
+      "wait": 0,
+      "repeat": 1,
+      "timeout": 30,
+      "expected_status": "NOERROR"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "pattern": "WChain-RChain",
+  "description": "WChain-RChain Attack composition",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0).q", "type": "NS", "ttl": 1, "ans": "n01.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r1", "type": "NS", "ttl": 1, "ans": "n11.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r2", "type": "NS", "ttl": 1, "ans": "n21.enc(rr0-vp0).b.$0."}
+        ]
+      },
+      {
+        "zone": "b.$0",
+        "records": [
+          { "name": "n01.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n02.enc(rr0-vp0).b.$0."},
+          { "name": "n02.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n03.enc(rr0-vp0).b.$0."},
+          { "name": "n03.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@1"},
+          { "name": "n11.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n12.enc(rr0-vp0).b.$0."},
+          { "name": "n12.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n13.enc(rr0-vp0).b.$0."},
+          { "name": "n13.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@1"},
+          { "name": "n21.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n22.enc(rr0-vp0).b.$0."},
+          { "name": "n22.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n23.enc(rr0-vp0).b.$0."},
+          { "name": "n23.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@1"}
+        ]
+      }
+    ],
+    "1": [
+      {
+        "zone": "q.a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "enc(rr0-vp0).r1.a.$0."}
+        ]
+      },
+      {
+        "zone": "r1.a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "enc(rr0-vp0).r2.a.$0."}
+        ]
+      },
+      {
+        "zone": "r2.a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "A", "ttl": 1}
+        ]
+      },
+      {
+        "zone": "b.$0",
+        "records": [
+          { "name": "*.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@1"}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-vp0).q.a.$0",
+      "wait": 0,
+      "repeat": 1,
+      "timeout": 30,
+      "expected_status": "NOERROR"
+    }
+  ]
+}

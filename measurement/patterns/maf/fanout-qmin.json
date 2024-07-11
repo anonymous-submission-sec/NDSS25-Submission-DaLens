@@ -1,0 +1,61 @@
+{
+  "pattern": "Fanout-Qmin",
+  "description": "Fanout-qmin amplification composition",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n1.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n2.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n3.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n4.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n5.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n6.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n7.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n8.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n9.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n10.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n11.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n12.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n13.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n14.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n15.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n16.enc(rr0-vp0).b.$0."}
+        ]
+      },
+      {
+        "zone": "b.$0",
+        "records": [
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n1.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n2.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n3.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n4.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n5.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n6.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n7.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n8.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n9.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n10.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n11.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n12.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n13.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n14.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n15.enc(rr0-vp0)", "type": "A", "ttl": 1},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.n16.enc(rr0-vp0)", "type": "A", "ttl": 1}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-vp0).$0",
+      "wait": 0,
+      "repeat": 1,
+      "timeout": 30,
+      "expected_status": "NOERROR"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "pattern": "Negative Caching Time",
+  "description": "Tries to estimate the negative response caching time of a resolver",
+  "remark": "It is required that the auth. nameserver has a min negative caching time of 0 seconds configured",
+  "zone": [
+  ],
+  "queries": [
+    { 
+      "ns": "ns0",
+      "vp": "vp0",
+      "query": "ns0-vp0",
+      "wait": 5,
+      "repeat": 10,
+      "expected_status": "NXDOMAIN"
+    },
+    { 
+      "ns": "ns0",
+      "vp": "vp0",
+      "query": "ns0-vp0",
+      "wait": 120,
+      "repeat": 30,
+      "expected_status": "NXDOMAIN"
+    }
+  ]
+}

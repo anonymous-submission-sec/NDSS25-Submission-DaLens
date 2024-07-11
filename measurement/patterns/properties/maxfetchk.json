@@ -1,0 +1,65 @@
+{
+  "pattern": "Number of Fetches",
+  "description": "Tries to determine the max number of concurrent fetches that are performed by a resolver",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n1.enc(rr0-vp0).$0." },
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n2.enc(rr0-vp0).$0." },
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n3.enc(rr0-vp0).$0." },
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n4.enc(rr0-vp0).$0." },
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n5.enc(rr0-vp0).$0." },
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n6.enc(rr0-vp0).$0." },
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n7.enc(rr0-vp0).$0." },
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n8.enc(rr0-vp0).$0." },
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n9.enc(rr0-vp0).$0." },
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n10.enc(rr0-vp0).$0." },
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n11.enc(rr0-vp0).$0." },
+          { "name": "f.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "n12.enc(rr0-vp0).$0." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n1.enc(rr0-vp0).$1." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n2.enc(rr0-vp0).$1." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n3.enc(rr0-vp0).$1." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n4.enc(rr0-vp0).$1." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n5.enc(rr0-vp0).$1." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n6.enc(rr0-vp0).$1." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n7.enc(rr0-vp0).$1." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n8.enc(rr0-vp0).$1." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n9.enc(rr0-vp0).$1." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n10.enc(rr0-vp0).$1." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n11.enc(rr0-vp0).$1." },
+          { "name": "enc(rr0-vp0).s", "type": "NS", "ttl": 1, "ans": "n12.enc(rr0-vp0).$1." }
+        ]
+      }
+    ],
+    "1": [{
+        "zone": "$1",
+        "records": [
+          { "name": "*.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@1"}]
+      },{
+        "zone": "s.$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "A", "ttl": 1}]
+      }]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-vp0).s.$0",
+      "repeat": 1,
+      "wait_after": 10,
+      "timeout": 30,
+      "expected_status": "NOERROR"
+    },
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "q.f.enc(rr0-vp0).$0",
+      "repeat": 1,
+      "timeout": 30,
+      "expected_status": "SRVFAIL"
+    }
+  ]
+}

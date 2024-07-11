@@ -1,0 +1,26 @@
+{
+  "pattern": "TTL Line",
+  "description": "This pattern is used to determine whether a certain resolver is using a shared frontend cache.",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "enc(ns0-vp0)", "type": "A", "ttl": 30}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "ns0",
+      "vp": "vp0",
+      "query": "enc(ns0-vp0).$0",
+      "wait": 3,
+      "repeat": 20,
+      "random_subdomains": false,
+      "timeout": 15,
+      "expected_status": "NOERROR"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "pattern": "Order Hierarchy Cache-based",
+  "description": "This pattern is used to decide whether ns0 uses ns1 or vice versa. It does so by filling the cache of one ns, then probing the other for the same domain but significantly delayed.",
+  "remark": "Make sure that Zone TTL > (wait+timeout)*repeat+wait_after",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "enc(rr0-rr1-vp0)", "type": "A", "ttl": 600},
+          { "name": "enc(rr1-rr0-vp0)", "type": "A", "ttl": 600}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-rr1-vp0).$0",
+      "wait": 0,
+      "repeat": 30,
+      "wait_after": 5,
+      "random_subdomains": false
+    },{ 
+      "rr": "rr1",
+      "vp": "vp0",
+      "query": "enc(rr0-rr1-vp0).$0",
+      "wait": 0,
+      "repeat": 3,
+      "wait_after": 10,
+      "random_subdomains": false
+    },
+    
+    { 
+      "rr": "rr1",
+      "vp": "vp0",
+      "query": "enc(rr1-rr0-vp0).$0",
+      "wait": 0,
+      "repeat": 30,
+      "wait_after": 5,
+      "random_subdomains": false
+    },
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr1-rr0-vp0).$0",
+      "wait": 0,
+      "repeat": 3,
+      "random_subdomains": false
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "pattern": "Honor TTL 0 Sweeping",
+  "description": "Query TTL 0 Record repeatedly to see what TTL the resolver returns",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "enc(ns0-vp0)", "type": "A", "ttl": 0}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "ns0",
+      "vp": "vp0",
+      "query": "enc(ns0-vp0)",
+      "wait": "wait0",
+      "repeat": "repeat0",
+      "random_subdomains": false,
+      "expected_status": "NOERROR"
+    },
+    { 
+      "rr": "ns0",
+      "vp": "vp0",
+      "query": "enc(ns0-vp0)",
+      "wait": "wait1",
+      "repeat": "repeat1",
+      "random_subdomains": false,
+      "expected_status": "NOERROR"
+    }
+  ]
+}

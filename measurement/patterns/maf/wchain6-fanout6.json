@@ -1,0 +1,110 @@
+{
+  "pattern": "WChain(6)-Fanout(6)",
+  "description": "WChain-Fanout Attack composition",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0).q", "type": "NS", "ttl": 1, "ans": "n01.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).q", "type": "NS", "ttl": 1, "ans": "n02.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).q", "type": "NS", "ttl": 1, "ans": "n03.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).q", "type": "NS", "ttl": 1, "ans": "n04.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).q", "type": "NS", "ttl": 1, "ans": "n05.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).q", "type": "NS", "ttl": 1, "ans": "n06.enc(rr0-vp0).b.$0."},
+
+          { "name": "enc(rr0-vp0).r1", "type": "NS", "ttl": 1, "ans": "n11.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r1", "type": "NS", "ttl": 1, "ans": "n12.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r1", "type": "NS", "ttl": 1, "ans": "n13.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r1", "type": "NS", "ttl": 1, "ans": "n14.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r1", "type": "NS", "ttl": 1, "ans": "n15.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r1", "type": "NS", "ttl": 1, "ans": "n16.enc(rr0-vp0).b.$0."},
+          
+          { "name": "enc(rr0-vp0).r2", "type": "NS", "ttl": 1, "ans": "n21.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r2", "type": "NS", "ttl": 1, "ans": "n22.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r2", "type": "NS", "ttl": 1, "ans": "n23.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r2", "type": "NS", "ttl": 1, "ans": "n24.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r2", "type": "NS", "ttl": 1, "ans": "n25.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r2", "type": "NS", "ttl": 1, "ans": "n26.enc(rr0-vp0).b.$0."},
+          
+          { "name": "enc(rr0-vp0).r3", "type": "NS", "ttl": 1, "ans": "n31.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r3", "type": "NS", "ttl": 1, "ans": "n32.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r3", "type": "NS", "ttl": 1, "ans": "n33.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r3", "type": "NS", "ttl": 1, "ans": "n34.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r3", "type": "NS", "ttl": 1, "ans": "n35.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r3", "type": "NS", "ttl": 1, "ans": "n36.enc(rr0-vp0).b.$0."},
+          
+          { "name": "enc(rr0-vp0).r4", "type": "NS", "ttl": 1, "ans": "n41.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r4", "type": "NS", "ttl": 1, "ans": "n42.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r4", "type": "NS", "ttl": 1, "ans": "n43.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r4", "type": "NS", "ttl": 1, "ans": "n44.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r4", "type": "NS", "ttl": 1, "ans": "n45.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r4", "type": "NS", "ttl": 1, "ans": "n46.enc(rr0-vp0).b.$0."},
+          
+          { "name": "enc(rr0-vp0).r5", "type": "NS", "ttl": 1, "ans": "n51.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r5", "type": "NS", "ttl": 1, "ans": "n52.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r5", "type": "NS", "ttl": 1, "ans": "n53.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r5", "type": "NS", "ttl": 1, "ans": "n54.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r5", "type": "NS", "ttl": 1, "ans": "n55.enc(rr0-vp0).b.$0."},
+          { "name": "enc(rr0-vp0).r5", "type": "NS", "ttl": 1, "ans": "n56.enc(rr0-vp0).b.$0."}
+          
+        ]
+      },
+      {
+        "zone": "b.$0",
+        "records": [
+          { "name": "*.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@1"}
+        ]
+      }
+    ],
+    "1": [
+      {
+        "zone": "q.a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "enc(rr0-vp0).r1.a.$0."}
+        ]
+      },
+      {
+        "zone": "r1.a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "enc(rr0-vp0).r2.a.$0."}
+        ]
+      },
+      {
+        "zone": "r2.a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "enc(rr0-vp0).r3.a.$0."}
+        ]
+      },
+      {
+        "zone": "r3.a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "enc(rr0-vp0).r4.a.$0."}
+        ]
+      },
+      {
+        "zone": "r4.a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "enc(rr0-vp0).r5.a.$0."}
+        ]
+      },
+      {
+        "zone": "r5.a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "A", "ttl": 1}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-vp0).q.a.$0",
+      "wait": 0,
+      "repeat": 1,
+      "timeout": 30,
+      "expected_status": "NOERROR"
+    }
+  ]
+}

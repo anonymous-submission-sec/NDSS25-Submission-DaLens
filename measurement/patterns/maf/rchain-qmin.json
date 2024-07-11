@@ -1,0 +1,50 @@
+{
+  "pattern": "RChain-QMIN",
+  "description": "RChain-qmin attack composition",
+  "remark": "DOES NOT WORK!",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "enc(rr0-vp0).a", "type": "NS", "ttl": 1, "ans": "c.b.a.ns1.enc(rr0-vp0).b.$0."},
+          { "name": "c.b.a.ns1.enc(rr0-vp0).b", "type": "A", "ttl": 1, "ans": "@0"}
+        ]
+      },
+      {
+        "zone": "b.$0",
+        "records": [
+          { "name": "c.b.a.ns1.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "c.b.a.ns2.enc(rr0-vp0).b.$0."},
+          { "name": "c.b.a.ns2.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "c.b.a.ns3.enc(rr0-vp0).b.$0."},
+          { "name": "c.b.a.ns3.enc(rr0-vp0)", "type": "NS", "ttl": 1, "ans": "enc(rr0-vp0).$1."}
+          
+        ]
+      }
+    ],
+    "1": [
+      {
+        "zone": "$1",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@1"}
+        ]
+      },
+      {
+        "zone": "a.$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "A", "ttl": 1}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-vp0).a.$0",
+      "wait": 0,
+      "repeat": 1,
+      "timeout": 30,
+      "expected_status": "NOERROR"
+    }
+  ]
+}

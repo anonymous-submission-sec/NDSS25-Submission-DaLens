@@ -1,0 +1,85 @@
+{
+  "pattern": "Fanout(6)-WChain(6) Fail",
+  "description": "Fanout-WChain: the resolution will fail in this pattern",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+
+          { "name": "q.enc(rr0-vp0).a", "type": "NS", "ttl": 1, "ans": "n1.enc(rr0-vp0).a.$0."},
+          { "name": "q.enc(rr0-vp0).a", "type": "NS", "ttl": 1, "ans": "n2.enc(rr0-vp0).a.$0."},
+          { "name": "q.enc(rr0-vp0).a", "type": "NS", "ttl": 1, "ans": "n3.enc(rr0-vp0).a.$0."},
+          { "name": "q.enc(rr0-vp0).a", "type": "NS", "ttl": 1, "ans": "n4.enc(rr0-vp0).a.$0."},
+          { "name": "q.enc(rr0-vp0).a", "type": "NS", "ttl": 1, "ans": "n5.enc(rr0-vp0).a.$0."},
+          { "name": "q.enc(rr0-vp0).a", "type": "NS", "ttl": 1, "ans": "n6.enc(rr0-vp0).a.$0."},
+          { "name": "n1.enc(rr0-vp0).a", "type": "CNAME", "ttl": 1, "ans": "r11.enc(rr0-vp0).b.$0."},
+          { "name": "n2.enc(rr0-vp0).a", "type": "CNAME", "ttl": 1, "ans": "r21.enc(rr0-vp0).b.$0."},
+          { "name": "n3.enc(rr0-vp0).a", "type": "CNAME", "ttl": 1, "ans": "r31.enc(rr0-vp0).b.$0."},
+          { "name": "n4.enc(rr0-vp0).a", "type": "CNAME", "ttl": 1, "ans": "r41.enc(rr0-vp0).b.$0."},
+          { "name": "n5.enc(rr0-vp0).a", "type": "CNAME", "ttl": 1, "ans": "r51.enc(rr0-vp0).b.$0."},
+          { "name": "n6.enc(rr0-vp0).a", "type": "CNAME", "ttl": 1, "ans": "r61.enc(rr0-vp0).b.$0."}
+        ]
+      },
+      {
+        "zone": "b.$0",
+        "records": [
+          { "name": "r11.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r12.enc(rr0-vp0).b.$0."},
+          { "name": "r12.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r13.enc(rr0-vp0).b.$0."},
+          { "name": "r13.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r14.enc(rr0-vp0).b.$0."},
+          { "name": "r14.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r15.enc(rr0-vp0).b.$0."},
+          { "name": "r15.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r16.enc(rr0-vp0).b.$0."},
+          { "name": "r16.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@0"},
+          
+          { "name": "r21.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r22.enc(rr0-vp0).b.$0."},
+          { "name": "r22.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r23.enc(rr0-vp0).b.$0."},
+          { "name": "r23.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r24.enc(rr0-vp0).b.$0."},
+          { "name": "r24.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r25.enc(rr0-vp0).b.$0."},
+          { "name": "r25.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r26.enc(rr0-vp0).b.$0."},
+          { "name": "r26.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@0"},
+          
+          { "name": "r31.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r32.enc(rr0-vp0).b.$0."},
+          { "name": "r32.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r33.enc(rr0-vp0).b.$0."},
+          { "name": "r33.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r34.enc(rr0-vp0).b.$0."},
+          { "name": "r34.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r35.enc(rr0-vp0).b.$0."},
+          { "name": "r35.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r36.enc(rr0-vp0).b.$0."},
+          { "name": "r36.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@0"},
+          
+          { "name": "r41.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r42.enc(rr0-vp0).b.$0."},
+          { "name": "r42.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r43.enc(rr0-vp0).b.$0."},
+          { "name": "r43.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r44.enc(rr0-vp0).b.$0."},
+          { "name": "r44.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r45.enc(rr0-vp0).b.$0."},
+          { "name": "r45.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r46.enc(rr0-vp0).b.$0."},
+          { "name": "r46.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@0"},
+          
+          { "name": "r51.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r52.enc(rr0-vp0).b.$0."},
+          { "name": "r52.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r53.enc(rr0-vp0).b.$0."},
+          { "name": "r53.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r54.enc(rr0-vp0).b.$0."},
+          { "name": "r54.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r55.enc(rr0-vp0).b.$0."},
+          { "name": "r55.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r56.enc(rr0-vp0).b.$0."},
+          { "name": "r56.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@0"},
+          
+          { "name": "r61.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r62.enc(rr0-vp0).b.$0."},
+          { "name": "r62.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r63.enc(rr0-vp0).b.$0."},
+          { "name": "r63.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r64.enc(rr0-vp0).b.$0."},
+          { "name": "r64.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r65.enc(rr0-vp0).b.$0."},
+          { "name": "r65.enc(rr0-vp0)", "type": "CNAME", "ttl": 1, "ans": "r66.enc(rr0-vp0).b.$0."},
+          { "name": "r66.enc(rr0-vp0)", "type": "A", "ttl": 1, "ans": "@0"}
+          
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "q.enc(rr0-vp0).a.$0",
+      "wait": 0,
+      "repeat": 1,
+      "timeout": 30,
+      "expected_status": "SRVFAIL"
+    }
+  ]
+}
+

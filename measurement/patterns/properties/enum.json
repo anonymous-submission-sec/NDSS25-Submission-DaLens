@@ -1,0 +1,26 @@
+{
+  "pattern": "Enumerate Resolvers",
+  "description": "Random subdomains to bypass caching, hopefully triggering a different egress Resolvers with each query",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "A", "ttl": 0, "random_subdomains": true }
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "enc(rr0-vp0).$0",
+      "wait": 0,
+      "repeat": 20,
+      "random_subdomains": true,
+      "timeout": 20,
+      "expected_status": "NOERROR"
+    }
+  ]
+}

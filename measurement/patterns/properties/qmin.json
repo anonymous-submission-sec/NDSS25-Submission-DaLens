@@ -1,0 +1,26 @@
+{
+  "pattern": "QMIN below SLD",
+  "description": "Tests whether a resolver employs Query Minimization (QMIN) below Second Level Domains (SLD)",
+  "remark": "The depth of the name tested should be at least 12 to ascertain the limit of QMIN iterations a resolver performs",
+  "nameservers": {
+    "0": [
+      {
+        "zone": "$0",
+        "records": [
+          { "name": "enc(rr0-vp0)", "type": "A", "ttl": 15},
+          { "name": "a.enc(rr0-vp0)", "type": "A", "ttl": 15},
+          { "name": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.enc(rr0-vp0)", "type": "A", "ttl": 15}
+        ]
+      }
+    ]
+  },
+  "queries": [
+    { 
+      "rr": "rr0",
+      "vp": "vp0",
+      "query": "p.o.n.m.l.k.j.i.h.g.f.e.d.c.b.a.enc(rr0-vp0).$0",
+      "repeat": 1,
+      "expected_status": "NOERROR"
+    }
+  ]
+}
